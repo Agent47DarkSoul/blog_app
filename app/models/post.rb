@@ -7,4 +7,8 @@ class Post < ActiveRecord::Base
   has_many :comments
 
   validates :title, :content, presence: true
+
+  def category_names
+    categories.map(&:name)
+  end
 end

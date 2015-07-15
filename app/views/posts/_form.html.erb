@@ -13,7 +13,7 @@
     <br />
 
     <% categories.each do |id, category| %>
-      <%= check_box_tag 'post[category_ids][]', category %> <%= category %>
+      <%= check_box_tag 'post[category_ids][]', category, post.category_names.include?(category) %> <%= category %>
     <% end %>
 
     <br />
